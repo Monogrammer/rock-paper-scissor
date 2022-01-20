@@ -1,20 +1,20 @@
 let playerScore = 0;
 let computerScore = 0;
-const $buttons = document.querySelectorAll(".options button");
+const $inputs = document.querySelectorAll(".options input");
 const $gameButton = document.getElementById("start-game"),
   $title = document.querySelector(".title");
 
+  /* Game Start */
 $gameButton.addEventListener("click", e => {
   $gameButton.classList.add("hidden");
   $title.classList.remove("hidden");
   $title.classList.add("is-active");
 });
 
-
-
-$buttons.forEach(el => {
+$inputs.forEach(el => {
   el.addEventListener("click", function () {
-    const playerSelection = this.textContent;
+    const playerSelection = this.value;
+    console.log(this.value);
 
     const compOptions = ["Rock", "Paper", "Scissors"];
     const compInput = compOptions[Math.floor(Math.random() * 3)];
@@ -58,12 +58,9 @@ function playRound(playerSelection, compInput){
     alert(`${currentMatch} is a Tie`);
     return;
   }
-
   if(playerScore === 5){
     alert("You won!")
   }
-
-
   if(
     (playerSelection === "Rock" && compInput === "Scissors") ||
     (playerSelection === "Scissors" && compInput === "Paper") || 
@@ -77,7 +74,6 @@ function playRound(playerSelection, compInput){
     computerScore++;
     // if(playerScore !== 0) playerScore--;
   }
-;
 };
 
 
