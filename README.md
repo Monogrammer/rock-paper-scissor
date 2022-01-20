@@ -1,3 +1,3 @@
 # Rock-Paper-Scissor
 
-Rock, Paper, Scissor game made for The Odin Project course.
+Rock, Paper, Scissor game project made as part of The Odin Project Curriculum.
