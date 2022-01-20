@@ -1,0 +1,10 @@
+.hidden {
+  display: none;
+}
+.game-btn {
+  width: 50%;
+  height: auto;
+}
+.is-active {
+  display: block;
+}
